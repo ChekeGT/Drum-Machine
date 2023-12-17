@@ -1,5 +1,6 @@
 <script>
     import DrumKey from "./lib/DrumKey.svelte";
+    import PowerButton from "./lib/PowerButton.svelte";
     class buttonObj {
         constructor (key, name){
             this.key = key
@@ -28,6 +29,9 @@
             {#each heaterButtons as button}
                 <DrumKey {...button}/>
             {/each}
+            </div>
+            <div>
+                <PowerButton/>
             </div>
         </div>
     </div>
