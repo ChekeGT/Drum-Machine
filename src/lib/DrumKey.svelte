@@ -1,5 +1,5 @@
 <script>
-    import { power } from "../store";
+    import { power, selectedKey } from "../store";
 
     export let key;
     export let audio;
@@ -22,15 +22,18 @@
             audio.play()
         }
     }
+    const playKey = () => {
+        makeAnimation()
+        playAudio()
+        selectedKey.set(name)
+    }
     function handleKeyDown(e){
         if (e.key.toLowerCase() == key.toLowerCase()){
-            makeAnimation()
-           playAudio()
+            playKey()
         }
     }
     function handleClick(){
-        makeAnimation()
-        playAudio()
+        playKey()
     }
 </script>
 

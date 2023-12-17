@@ -1,6 +1,7 @@
 <script>
     import DrumKey from "./lib/DrumKey.svelte";
     import PowerButton from "./lib/PowerButton.svelte";
+    import SelectedKey from "./lib/SelectedKey.svelte";
     class buttonObj {
         constructor (key, name){
             this.key = key
@@ -32,6 +33,7 @@
             </div>
             <div>
                 <PowerButton/>
+                <SelectedKey/> 
             </div>
         </div>
     </div>
