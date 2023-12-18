@@ -38,9 +38,11 @@
 </script>
 
 <svelte:window on:keydown={handleKeyDown}/>
-<button class={`drum-machine-key ${animation ? animation == 1 ? 'animation1' : 'animation2' : ''}`} id={name} on:click={handleClick}>{key.toUpperCase()}</button>
+<button class={`drum-pad ${animation ? animation == 1 ? 'animation1' : 'animation2' : ''}`} id={name} on:click={handleClick}>{key.toUpperCase()}
+    <audio src={`https://s3.amazonaws.com/freecodecamp/drums/${name}.mp3`} class="clip" id={key.toUpperCase()} bind:this={audio}></audio>
+</button>
 <style lang="sass">
-    .drum-machine-key
+    .drum-pad
         background-color: grey
         border: 0
         box-shadow: black 3px 3px 5px
