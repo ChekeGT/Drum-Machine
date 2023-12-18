@@ -2,6 +2,7 @@
     import DrumKey from "./lib/DrumKey.svelte";
     import PowerButton from "./lib/PowerButton.svelte";
     import SelectedKey from "./lib/SelectedKey.svelte";
+    import VolumeSlider from "./lib/VolumeSlider.svelte";
     class buttonObj {
         constructor (key, name){
             this.key = key
@@ -33,7 +34,8 @@
             </div>
             <div>
                 <PowerButton/>
-                <SelectedKey/> 
+                <SelectedKey/>
+                <VolumeSlider/> 
             </div>
         </div>
     </div>
